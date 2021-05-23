@@ -1,8 +1,8 @@
 from add import M
 from main import movimento, read_strip_until_end
 
-for i in range(2):
-    for j in range(2):
+for i in range(100):
+    for j in range(100):
 
         # Tranformando os indices para binário (tipo string)
         n1 = bin(i)
