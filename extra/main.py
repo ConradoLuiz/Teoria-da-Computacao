@@ -30,15 +30,17 @@ def movimento(mt, palavra):
     final_states = mt[-1]
     pointer = 0
     blank = mt[5]
+    qtd_passos = 0
 
     while current_state not in final_states:
+        qtd_passos += 1
         result = delta(mt, current_state, strip[pointer])
         current_state, new_symbol, direction = result
 
         strip[pointer] = new_symbol
         strip, pointer = move_strip(strip, pointer, direction)
 
-    return strip, pointer
+    return strip, pointer, qtd_passos
 
 def read_strip_until_end(strip, pointer, blank='B'):
     strip = strip[pointer:] 

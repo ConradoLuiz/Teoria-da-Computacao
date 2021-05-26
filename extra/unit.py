@@ -15,7 +15,7 @@ for i in range(100):
         result = bin(i + j)[2:]
 
         # Computando a resposta com a MT
-        fita_resultante, ponteiro = movimento(M, fita)
+        fita_resultante, ponteiro, _ = movimento(M, fita)
 
         # Lendo a resposta da fita e juntando numa string para comparar
         result_mt = ''.join(read_strip_until_end(fita_resultante, ponteiro))
